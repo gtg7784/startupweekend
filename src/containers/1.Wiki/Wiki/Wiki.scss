@@ -1,0 +1,42 @@
+.Wiki{
+  
+  & > h2{
+    color: #fc9406;
+  }
+
+  & > input[type=text]{
+    width: 60%;
+    padding: 0.375rem 0.75rem;
+    color: #6c757d;
+    border: 1px solid #fc9406;
+    border-radius: 3px;
+  }
+  & > button{
+    padding: 0.375rem 0.75rem;
+    border-radis: 3px solid #fc9406;
+    color: #fff;
+    background-color: #fc9406;
+  }
+
+  & > div.line{
+    margin-top: 3%;
+    height: 2px;
+    background-color: #fc9406;
+    width: 80%;
+  }
+
+  & > table{
+    color: #fc9406;
+    width: 60%;
+    margin-top: 1%;
+
+    & > thead > td:nth-child(1) {
+        width: 20%;
+      }
+
+    & > tbody > tr > td > a{
+        color: #fc9406;
+    }
+
+  }
+}

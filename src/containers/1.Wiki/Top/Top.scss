@@ -1,0 +1,16 @@
+.Top{
+  & > h2{
+    color: #fc9406;
+  }
+
+  & > div.line{
+    margin-top: 3%;
+    height: 2px;
+    background-color: #fc9406;
+    width: 80%;
+  }
+
+  & > p{
+    color: #fc9406;
+  }
+}

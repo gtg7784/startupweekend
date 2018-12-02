@@ -1,0 +1,27 @@
+.Vote{
+
+  & > h2{
+    color: #fc9406;
+  }
+
+  & > div.line{
+    margin-top: 3%;
+    height: 2px;
+    background-color: #fc9406;
+    width: 80%;
+  }
+
+  & > table{
+    color: #fc9406;
+    width: 60%;
+    margin-top: 1%;
+
+    & > thead > td:nth-child(1) {
+      width: 20%;
+    }
+
+    & > tbody > tr > td > a{
+      color: #fc9406;
+    }
+  }
+}

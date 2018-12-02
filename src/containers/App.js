@@ -6,7 +6,7 @@ import styles from './App.scss';
 
 import Header from "../components/Header/Header";
 import Menu from "../components/Menu/Menu";
-import Wiki from '../containers/1.Wiki/Wiki';
+import Wiki from './1.Wiki/';
 import Net from '../containers/2. Net/Net';
 import Music from "./3.Music/Music";
 
@@ -28,17 +28,22 @@ class App extends Component {
             <div>#Between insider and ouiser.</div>
             {this.state.isShowSubMenu && <div className={cx('submenu-bg')} />}
             <div className={cx('menu-box')}>
-                <Menu title="INSSA WIKI" to="/wiki"/>
+                <Menu title="INSSA WIKI" onMouseOut={() => this.setState({ isShowSubMenu: false })} onMouseOver={() => this.setState({ isShowSubMenu: true })}>
+                    <Link to="/wiki">Wiki</Link>
+                    <Link to="/vote">Vote</Link>
+                </Menu>
                 <Menu title="INSSA NET" to="/net"/>
                 <Menu title="INSSA MUSIC" to="/music"/>
             </div>
         </nav>
           <main>
-              <Header user={{ name: '고태건', position: '장학샘' }}/>
+              <Header user={{ name: '고태건', position: '@ta3g30n' }}/>
               <div className={cx("main")}>
                   <Switch>
                       <Route path="/" exact component={Wiki}/>
-                      <Route path="/wiki" exact component={Wiki}/>
+                      <Route path="/wiki" exact component={Wiki.Wiki}/>
+                      <Route path="/wiki/01" exact component={Wiki.Top}/>
+                      <Route path="/vote" exact component={Wiki.Vote}/>
                       <Route path="/net" exact component={Net}/>
                       <Route path="/music" exact component={Music}/>
                   </Switch>
