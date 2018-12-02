@@ -6,8 +6,8 @@ import styles from './App.scss';
 
 import Header from "../components/Header/Header";
 import Menu from "../components/Menu/Menu";
-import Wiki from './1.Wiki/';
-import Net from '../containers/2. Net/Net';
+import Wiki from './1.Wiki';
+import Net from './2. Net/Net';
 import Music from "./3.Music/Music";
 
 const cx = classNames.bind(styles);
@@ -25,7 +25,7 @@ class App extends Component {
       <div className={cx("App")}>
         <nav>
             <div><Link to="/wiki">#INSSANOTE</Link></div>
-            <div>#Between insider and ouiser.</div>
+            <div>#Between insider and outsiser.</div>
             {this.state.isShowSubMenu && <div className={cx('submenu-bg')} />}
             <div className={cx('menu-box')}>
                 <Menu title="INSSA WIKI" onMouseOut={() => this.setState({ isShowSubMenu: false })} onMouseOver={() => this.setState({ isShowSubMenu: true })}>
@@ -40,7 +40,7 @@ class App extends Component {
               <Header user={{ name: '고태건', position: '@ta3g30n' }}/>
               <div className={cx("main")}>
                   <Switch>
-                      <Route path="/" exact component={Wiki}/>
+                      <Route path="/" exact component={Wiki.Wiki}/>
                       <Route path="/wiki" exact component={Wiki.Wiki}/>
                       <Route path="/wiki/01" exact component={Wiki.Top}/>
                       <Route path="/vote" exact component={Wiki.Vote}/>

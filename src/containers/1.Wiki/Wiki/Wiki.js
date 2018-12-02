@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import * as classNames from 'classnames/bind';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,7 +24,7 @@ export default class Home extends React.Component {
                     <tbody>
                     <tr>
                         <td>TOP 1</td>
-                        <td><Link to="/wiki/01">JMT</Link></td>
+                        <td>JMT</td>
                     </tr>
                     <tr>
                         <td>TOP 2</td>

@@ -4,7 +4,7 @@ import styles from './Header.scss';
 
 const cx = classNames.bind(styles);
 
-class Header extends Component {
+export default class Header extends Component {
     render() {
         return (
             <div className={cx("Header")}>
@@ -21,4 +21,3 @@ class Header extends Component {
     }
 }
 
-export default Header;
